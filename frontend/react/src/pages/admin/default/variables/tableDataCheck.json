@@ -1,0 +1,27 @@
+[
+ {
+  "name":["Vesh Raj Thapa",false],
+  "access": "farmer",
+  "date_joined": "12 Jul 2023",
+  "products": 1
+},
+{
+  "name":["Aarati Adhikari",true],
+  "access": "wholesaler",
+  "date_joined": "11 Jun 2023",
+  "products": 0
+},
+{
+  "name":["Ruxali Maharjan",true],
+  "access": "farmer",
+  "date_joined": "8 Jun 2023",
+  "products": 3
+}
+  ,
+{
+  "name":["Ruxana Maharjan",true],
+  "access": "farmer",
+  "date_joined": "3 Jun 2023",
+  "products": 5
+}
+]

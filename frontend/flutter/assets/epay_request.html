@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esewa Payment</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .payment-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .payment-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .payment-form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .payment-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<!--<div class="payment-form">-->
+<!--    <h1>eSewa Payment</h1>-->
+<!--    <form action="https://uat.esewa.com.np/epay/main" method="POST" id="form">-->
+<!--        <input value="100" name="tAmt" type="hidden">-->
+<!--        <input value="90" name="amt" type="hidden">-->
+<!--        <input value="5" name="txAmt" type="hidden">-->
+<!--        <input value="2" name="psc" type="hidden">-->
+<!--        <input value="3" name="pdc" type="hidden">-->
+<!--        <input value="EPAYTEST" name="scd" type="hidden">-->
+<!--        <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">-->
+<!--        <input value="https://developer.esewa.com.np/#/" type="hidden" name="su">-->
+<!--        <input value="https://developer.esewa.com.np/#/" type="hidden" name="fu">-->
+<!--        <input value="Pay now with eSewa ePay" type="submit">-->
+<!--    </form>-->
+<!--</div>-->
+</body>
+
+<body>
+<div class="payment-form">
+<form action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST" id="form">
+    <input hidden type="text" id="amount" name="amount" value="100" required>
+    <input hidden type="text" id="tax_amount" name="tax_amount" value ="10" required>
+    <input hidden type="text" id="total_amount" name="total_amount" value="110" required>
+    <input hidden type="text" id="transaction_uuid" name="transaction_uuid" value="11-201-13" required>
+    <input hidden type="text" id="product_code" name="product_code" value ="EPAYTEST" required>
+    <input hidden type="text" id="product_service_charge" name="product_service_charge" value="0" required>
+    <input hidden type="text" id="product_delivery_charge" name="product_delivery_charge" value="0" required>
+    <input hidden type="text" id="success_url" name="success_url" value="https://esewa.com.np" required>
+    <input hidden type="text" id="failure_url" name="failure_url" value="https://google.com" required>
+    <input hidden type="text" id="signed_field_names" name="signed_field_names" value="amount,total_amount,transaction_uuid,product_code" required>
+    <input hidden type="text" id="signature" name="signature"  required>
+<!--    <input type="text" id="signature2" name="signature2" required>-->
+<!--    <input value="Pay Now with Esewa" type="submit" style="color:green">-->
+
+
+    <input value="Pay Now with Esewa" type="submit" style=" background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;">
+</form>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha256.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1
+/enc-base64.min.js"></script>
+<script>
+<!-- var hash = CryptoJS.HmacSHA256("amount=100,total_amount=110,transaction_uuid=11-201-15,product_code=EPAYTEST", "8gBm/:&EnhH.1/q");-->
+<!-- var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);-->
+<!-- document.write(hashInBase64);-->
+</script>
+<script type="text/javascript">
+
+    function requestPaymentv2(tAmt, amt, txAmt, psc, pdc, scd, pid, su, fu) {
+        oForm = document.forms['form'];
+        oForm.elements['tAmt'].value = tAmt;
+        oForm.elements['amt'].value = amt;
+        oForm.elements['txAmt'].value = txAmt;
+        oForm.elements['psc'].value = psc;
+        oForm.elements['pdc'].value = pdc;
+        oForm.elements['scd'].value = scd;
+        oForm.elements['pid'].value = pid;
+        oForm.elements['su'].value = su;
+        oForm.elements['fu'].value = fu;
+    }
+    function requestPayment(tAmt, amt, txAmt, psc, pdc, scd, pid, su, fu) {
+        oForm = document.forms['form'];
+        oForm.elements['amount'].value = amt;
+        oForm.elements['tax_amount'].value = txAmt;
+        oForm.elements['total_amount'].value = tAmt;
+        oForm.elements['transaction_uuid'].value = pid;
+        oForm.elements['product_service_charge'].value = psc;
+        oForm.elements['product_delivery_charge'].value = pdc;
+        var message = `amount=${amt},total_amount=${tAmt},transaction_uuid=${pid},product_code=EPAYTEST`;
+        var hash = CryptoJS.HmacSHA256(message,"8gBm/:&EnhH.1/q");
+        var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);
+        oForm.elements['signature'].value = hashInBase64;
+        oForm.elements['success_url'].value = su;
+        oForm.elements['failure_url'].value = fu;
+    }
+</script>
+</html>

@@ -1,0 +1,14 @@
+﻿id,farmer_id,product_name,category,quantity
+1,1,Small Tomato,vegetable,100
+2,2,Red Tomato,vegetable,200
+3,2,Potato,vegetable,50
+4,1,Carrot,vegetable,10
+5,2,apple,fruit,20
+6,3,wheat,cereal,40
+7,4,lemon,vegetable,40
+8,5,jhomsom apple,fruit,40
+9,6,orage,fruit,40
+10,7,rice,cereal,20
+11,8,maize,cereal,50
+12,9,Cornflakes,cereal,30
+13,10,Wheat Flakes,cereal,20
