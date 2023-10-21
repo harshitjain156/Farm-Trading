@@ -9,16 +9,11 @@
   <img src="/images/farmhouse.jpg" width="20%" />
 </p> -->
 
-## 🚜 About AgroMillets
-+ **AgroMillets** is an online platform that connects farmers who produce grains and millets with customers who want to buy them directly. 
-+ By **eliminating intermediaries** and providing a **direct connection between farmers and customers**, AgroMillets makes it easier for farmers to sell their products and for customers to find fresh and high-quality grains and millets at lower prices. 
+## 🚜 About FarmTrading
++ **FarmTrading** is an online platform that connects farmers who produce grains and millets with customers who want to buy them directly. 
++ By **eliminating intermediaries** and providing a **direct connection between farmers and customers**, FarmTrading makes it easier for farmers to sell their products and for customers to find fresh and high-quality grains and millets at lower prices. 
 + The platform provides **secure payment options, shipping services, and customer service** to ensure *safe and efficient transactions. *
-+ With **AgroMillets**, farmers can expand their customer base and customers can support sustainable farming practices while enjoying a wider variety of products.
-
-
-## 🚀 Live Preview 
-+ **Website**: [__AgroMillets.com__](https://agro-millets.netlify.app/)
-+ **App**: [__APK__](https://github.com/AmanNegi/AgroMillets/releases/tag/v0.0.2)
++ With **FarmTrading**, farmers can expand their customer base and customers can support sustainable farming practices while enjoying a wider variety of products.
 
 
 ## 💪 Advantages
