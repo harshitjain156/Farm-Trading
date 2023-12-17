@@ -1,7 +1,5 @@
 <!-- <h1 align="center"> Agro-Millets 🌾 </h1> -->
 
-<img src="./images/agro_banner.png"  />
-
 <!-- <p align="middle">
   <img src="/images/farm.jpg" width="20%" />
   <img src="/images/farmer.jpg" width="20%" /> 
