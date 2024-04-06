@@ -212,7 +212,7 @@ class _UnpaidPageState extends ConsumerState<UnpaidPage> {
             .push(MaterialPageRoute(builder: (_) => PaymentPage(selectedItem:selectedItem)));
       },
       style: ElevatedButton.styleFrom(
-        primary: Colors.green,
+        backgroundColor: Colors.green,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(9.0),
         ),

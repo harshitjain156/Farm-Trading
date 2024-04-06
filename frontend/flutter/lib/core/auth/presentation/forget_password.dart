@@ -201,8 +201,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         _resetPassword, // Call the reset password function
                     style: ElevatedButton.styleFrom(
                      // primary: Colors.green, // Button background color
-                      onPrimary: Colors.green, // Button text color
-                      shape: RoundedRectangleBorder(
+                      foregroundColor: Colors.green, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                             20.0), // Set the border radius
                         side: BorderSide(

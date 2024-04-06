@@ -120,7 +120,7 @@ class _CartPageState extends ConsumerState<CartPage> {
         : null,
 
                 style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(
+                  backgroundColor: Color.fromARGB(
                       255, 10, 179, 52), // Customize the button color
                   padding: EdgeInsets.symmetric(vertical: 20.0),
                   shape: RoundedRectangleBorder(

@@ -1,7 +1,8 @@
 import 'package:agro_millets/data/cache/app_cache.dart';
 import 'package:agro_millets/models/millet_item.dart';
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../models/order_item.dart';
 import '../../application/home_manager.dart';

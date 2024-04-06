@@ -68,9 +68,6 @@ class _NewsAppState extends State<NewsApp> {
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,  // Set the app bar background color to white
           iconTheme: IconThemeData(color: Colors.black),  // Set the app bar icons color to black
-          textTheme: TextTheme(
-            headline6: TextStyle(color: Colors.black),  // Set the app bar title text color to black
-          ),
         ),
       ),
       // : ThemeData(
@@ -249,7 +246,7 @@ class _NewsAppState extends State<NewsApp> {
                                   child: Card(
                                     elevation: 0,
                                     color: Theme.of(context)
-                                        .primaryColor
+                                        .backgroundColor
                                         .withOpacity(0.8),
                                     child: Padding(
                                       padding:

@@ -1,21 +1,23 @@
 "id","farmer_id","product_name","category","quantity"
 "64e467a456a2a168ce8ff7ff","64e4671f56a2a168ce8ff7cf","Asparagus","vegetables",87
-"64e467e456a2a168ce8ff813","64e4671f56a2a168ce8ff7cf","Spinach","vegetables",462
+"64e467e456a2a168ce8ff813","64e4671f56a2a168ce8ff7cf","Spinach","vegetables",456
 "64e4681356a2a168ce8ff820","64e4671f56a2a168ce8ff7cf","Rayo Spinach","vegetables",395
-"64e4699e241f1b64d6a040b7","64e4671f56a2a168ce8ff7cf","Green Apple","fruits",184
+"64e4699e241f1b64d6a040b7","64e4671f56a2a168ce8ff7cf","Green Apple","fruits",176
 "64e469ea241f1b64d6a040c7","64e4671f56a2a168ce8ff7cf","Wheat","cereals",412
 "64e46a12241f1b64d6a040d1","64e4671f56a2a168ce8ff7cf","Walnut ","cash",200
 "64e46a4a241f1b64d6a040f3","64e4671f56a2a168ce8ff7cf","olive ","oil",184
 "64e46c22241f1b64d6a04132","64e46bf5241f1b64d6a04121","Cabbage","vegetables",129
-"64e46c72241f1b64d6a04144","64e46bf5241f1b64d6a04121","Alphonso mango ","fruits",355
+"64e46c72241f1b64d6a04144","64e46bf5241f1b64d6a04121","Alphonso mango ","fruits",351
 "64e46cb0241f1b64d6a04152","64e46bf5241f1b64d6a04121","Wheat","pulses",300
 "64e46cd4241f1b64d6a0415c","64e46bf5241f1b64d6a04121","Cheese","livestock",25
 "64e46d1b241f1b64d6a0416c","64e46bf5241f1b64d6a04121","coffee-beans","cash",290
 "6517dd3ffd591afae950dddd","64e4671f56a2a168ce8ff7cf","Sugarcane ","fruits",198
-"651af033ccdcab0f692b974d","64e46bf5241f1b64d6a04121","oranges","fruits",47
+"651af033ccdcab0f692b974d","64e46bf5241f1b64d6a04121","oranges","fruits",46
 "651d50dda5e2620db235d768","64e4671f56a2a168ce8ff7cf","Coffee-beans ","cash",70
 "651d5150a5e2620db235d838","64e4671f56a2a168ce8ff7cf","Brown rice","pulses",200
-"651d51c4a5e2620db235d8f0","64e4671f56a2a168ce8ff7cf","white eggs ","livestock",500
-"651d5f2fa5e2620db235f033","64e46bf5241f1b64d6a04121","barely","pulses",300
+"651d51c4a5e2620db235d8f0","64e4671f56a2a168ce8ff7cf","white eggs ","livestock",372
+"651d5f2fa5e2620db235f033","64e46bf5241f1b64d6a04121","barely","pulses",297
 "651d5f5ba5e2620db235f08c","64e46bf5241f1b64d6a04121","coconut ","oil",200
 "651d5f97a5e2620db235f10e","64e46bf5241f1b64d6a04121","maize","cereals",300
+"65214fb9ba0d229c6b5175ac","64e4671f56a2a168ce8ff7cf","Egg","livestock",294
+"65221eefba0d229c6b518408","64e4671f56a2a168ce8ff7cf","milk","livestock",200
