@@ -51,7 +51,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
           SizedBox(height: 0.025 * getHeight(context)),
           const Center(
             child: Text(
-              "Farm Trading",
+              "AIMS",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,

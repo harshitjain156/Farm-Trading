@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 ValueNotifier<AppState> appState = ValueNotifier(AppState.initial());
 
 class AppCache {
-  final String _prefsKey = "Agro_Millets";
+  final String _prefsKey = "AIMS";
 
   getDataFromDevice() async {
     var sharedPreferences = await SharedPreferences.getInstance();

@@ -1,3 +1,4 @@
+import 'package:agro_millets/core/chat_bot/chat_bot.dart';
 import 'package:agro_millets/core/home/application/home_manager.dart';
 import 'package:agro_millets/core/home/application/home_provider.dart';
 import 'package:agro_millets/core/home/presentation/add_item/add_item.dart';
@@ -38,9 +39,10 @@ class _HomePageState extends ConsumerState<HomePage> {
       drawer: const AgroDrawer(),
       floatingActionButton: _getFloatingActionButton(),
       appBar: AppBar(
-        title: const Text("Farm Trading"),
+        title: const Text("AIMS"),
         centerTitle: true,
         actions: [
+          IconButton(onPressed: (){goToPage(context, ChatbotScreen());}, icon: Icon(Icons.chat)),
           if (!appCache.isAdmin())
             IconButton(
               icon: const Icon(Icons.search),

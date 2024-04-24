@@ -99,7 +99,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   ),
                   const Center(
                     child: Text(
-                      "Farm Trading",
+                      "AIMS",
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,

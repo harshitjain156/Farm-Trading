@@ -6,6 +6,6 @@
 
 
 // for wired debugging
-const String API_URL = "http://192.168.29.139:3000/api";
+// const String API_URL = "http://192.168.29.139:3000/api";
 //* For Emulator
-// const String API_URL = "http://10.0.2.2:3000/api";
+const String API_URL = "https://farm-trading.onrender.com/api";

@@ -110,12 +110,12 @@ class _AgroDrawerState extends State<AgroDrawer> {
               builder: (context, snapshot) {
                 if (snapshot.hasData && snapshot.data != null) {
                   return Text(
-                    "Farm Trading v${snapshot.data!.version}",
+                    "AIMS v${snapshot.data!.version}",
                     style: const TextStyle(color: Colors.grey, fontSize: 12),
                   );
                 }
                 return const Text(
-                  "Farm Trading",
+                  "AIMS",
                   style: TextStyle(color: Colors.grey, fontSize: 12),
                 );
               }),

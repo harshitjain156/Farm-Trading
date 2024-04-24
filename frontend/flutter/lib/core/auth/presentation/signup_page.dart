@@ -17,9 +17,8 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class SignUpPage extends ConsumerStatefulWidget {
   final String phone;
-  const SignUpPage({Key? key,required this.phone}) : super(key: key);
+  const SignUpPage({Key? key, required this.phone}) : super(key: key);
   // const SignUpPage(this.phone, {super.key});
-
 
   @override
   ConsumerState<SignUpPage> createState() => _SignUpPageState();
@@ -34,7 +33,6 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
 
   get hasError => null;
 
-
   @override
   void initState() {
     _authManager = AuthManager(context, ref);
@@ -48,27 +46,32 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
       isLoading: _authManager.isLoading,
       child: _getSignUpPage(context),
     );
-
   }
 
   SingleChildScrollView _getSignUpPage(BuildContext context) {
     List<Marker> buildMarkers() {
       if (selectedCoordinates.isEmpty) {
-        return [Marker(point:LatLng(27.694549317783395, 85.32055500746131),builder: (BuildContext context) {
-          return Icon(Icons.location_on, color: Colors.red);
-        },)];
+        return [
+          Marker(
+            point: LatLng(27.694549317783395, 85.32055500746131),
+            // builder: (BuildContext context) {
+            //   return Icon(Icons.location_on, color: Colors.red);
+            // },
+            child: Icon(Icons.location_on, color: Colors.red)
+          )
+        ];
       }
       return [
-      Marker(
-        point: selectedCoordinates.last,
-        builder: (BuildContext context) {
-          return Icon(Icons.location_on, color: Colors.red);
-        },
-      )
-      ];
-      return selectedCoordinates.map((LatLng latLng) {
+        Marker(
+          point: selectedCoordinates.last,
+          child: Icon(Icons.location_on, color: Colors.red)
 
-      }).toList();
+          // builder: (BuildContext context) {
+          //   return Icon(Icons.location_on, color: Colors.red);
+          // },
+        )
+      ];
+      return selectedCoordinates.map((LatLng latLng) {}).toList();
     }
 
     return SingleChildScrollView(
@@ -84,7 +87,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
           SizedBox(height: 0.015 * getHeight(context)),
           const Center(
             child: Text(
-              "Farm Trading",
+              "AIMS",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
@@ -135,37 +138,34 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
           ),
           SizedBox(
             height: 200, // Set the desired height for the map
-            width: 500, // Set the width to match the parent widget or provide a fixed width
+            width:
+                500, // Set the width to match the parent widget or provide a fixed width
             child: Stack(
               children: [
                 FlutterMap(
                   mapController: mapController,
-
                   options: MapOptions(
                     center: LatLng(27.694549317783395, 85.32055500746131),
                     zoom: 18,
                     minZoom: 2, // Set the minimum zoom level
                     maxZoom: 18,
-                    onTap: (mapController,LatLng latLng) {
+                    onTap: (mapController, LatLng latLng) {
                       setState(() {
                         selectedCoordinates.add(latLng);
                       });
                     },
                     // Set the maximum zoom level
                   ),
-
                   children: [
                     TileLayer(
-                      urlTemplate: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVzaGciLCJhIjoiY2xobHo4OXlpMTcwMDNzcGhzZ2wxZmtzZSJ9.fV25khQviUGZ14rLQC__tw',
+                      urlTemplate:
+                          'https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVzaGciLCJhIjoiY2xobHo4OXlpMTcwMDNzcGhzZ2wxZmtzZSJ9.fV25khQviUGZ14rLQC__tw',
                       userAgentPackageName: 'com.example.agro_millets',
                     ),
-
                     MarkerLayer(
                       markers: buildMarkers(),
                     ),
-
                   ],
-
                 ),
                 Positioned(
                   top: 10,
@@ -174,14 +174,14 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                     children: [
                       FloatingActionButton(
                         onPressed: () {
-                          mapController.move(mapController.center,18);
+                          mapController.move(mapController.center, 18);
                         },
                         child: Icon(Icons.add),
                       ),
                       SizedBox(height: 10),
                       FloatingActionButton(
                         onPressed: () {
-                          mapController.move(mapController.center,8);
+                          mapController.move(mapController.center, 8);
                         },
                         child: Icon(Icons.remove),
                       ),
@@ -197,11 +197,15 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
             onPressed: () async {
               goToPage(
                 context,
-                 MyPhone(email: email, name: username, password: password, coordinate: selectedCoordinates.last, userType: dropdownValue ,),
-
+                MyPhone(
+                  email: email,
+                  name: username,
+                  password: password,
+                  coordinate: selectedCoordinates.last,
+                  userType: dropdownValue,
+                ),
                 clearStack: true,
               );
-
             },
             text: "Continue",
           ),
@@ -282,5 +286,4 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
       ),
     );
   }
-
 }

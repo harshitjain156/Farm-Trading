@@ -42,7 +42,7 @@ class _CategoryPageState extends ConsumerState<CategoryPage> {
       drawer: const AgroDrawer(),
       floatingActionButton: _getFloatingActionButton(),
       appBar: AppBar(
-        title: const Text("Farm Trading"),
+        title: const Text("AIMS"),
         centerTitle: true,
         actions: [
           if (!appCache.isAdmin())

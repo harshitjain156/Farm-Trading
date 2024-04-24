@@ -48,9 +48,10 @@ class _MapPageState extends ConsumerState<MapPage> {
       return [
         Marker(
           point: LatLng(27.694549317783395, 85.32055500746131),
-          builder: (BuildContext context) {
-            return Icon(Icons.location_on, color: Colors.red);
-          },
+          // builder: (BuildContext context) {
+          //   return Icon(Icons.location_on, color: Colors.red);
+          // },
+          child: Icon(Icons.location_on, color: Colors.red)
         )
       ];
     }
@@ -86,7 +87,7 @@ class _MapPageState extends ConsumerState<MapPage> {
 
       return Marker(
         point: LatLng(user.latitude, user.longitude),
-        builder: (ctx) => GestureDetector(
+        child:  GestureDetector(
           onTap: () {
             showDialog(
               context: context,
@@ -199,7 +200,7 @@ class _MapPageState extends ConsumerState<MapPage> {
     }).toList();
     markers.add(Marker(
       point: LatLng(logged_in_user!.latitude, logged_in_user!.longitude),
-      builder: (ctx) => GestureDetector(
+      child: GestureDetector(
         child: OverflowBox(
           minWidth: 0,
           maxWidth: double.infinity,
@@ -231,7 +232,7 @@ class _MapPageState extends ConsumerState<MapPage> {
     if (selectedLocation !=null ) {
       markers.add(Marker(
         point: selectedLocation,
-        builder: (ctx) => GestureDetector(
+        child:GestureDetector(
           child: OverflowBox(
             minWidth: 0,
             maxWidth: double.infinity,
